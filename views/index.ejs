@@ -1,0 +1,46 @@
+<%- include('partials/header') -%>
+
+      <!-- <div class="green-message">
+        Employee data added to database successfully.
+      </div> -->
+
+      <% if (success_msg && success_msg != '') { %>
+        <div class="green-message"><%= success_msg %></div>
+      <% } else if (error_msg && error_msg != '') { %>
+        <div class="red-message"><%= error_msg %></div>
+      <% } %>
+
+<div class="emp-container">
+  <h2>Employee Data</h2>
+  <table id="employee-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% employees.forEach((empschema) =>{ %>
+      <tr>
+        <td><%= empschema.name %></td>
+        <td><%= empschema.designation %></td>
+        <td>$<%= empschema.salary %></td>
+        <td class="button-container">
+          <a class="edit-btn" href="/update/<%= empschema.id %>">Edit</a>
+          <form
+            action="/delete/<%= empschema.id %>?_method=DELETE"
+            method="post"
+          >
+            <input type="hidden" name="method" value="DELETE" />
+            <button class="delete-btn" type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('partials/footer') -%>

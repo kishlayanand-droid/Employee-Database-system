@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>    
+    
+    <div class="update-emp">
+        <h2>Update Employee</h2>
+        <form action="/update/<%= empschema.id %>?_method=PUT" method="post">
+          <input type="hidden" name="method" value="PUT">
+          <input type="text" value="<%= empschema.name %>" placeholder="Name" name="name" required>
+          <input type="text" value="<%= empschema.designation %>" placeholder="Designation" name="designation" required>
+          <input type="text" value="<%= empschema.salary %>" placeholder="Salary" name="salary" required>
+          <input type="submit" value="Update Employee">
+        </form>
+      </div>
+      
+<%- include('partials/footer') -%>    

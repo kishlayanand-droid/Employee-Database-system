@@ -1,0 +1,190 @@
+/* -----------------------------------Universal CSS----------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* -----------------------------------Scroll Bar----------------------------------- */
+
+
+/* Target WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track (the area where the scrollbar is located) */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle (the draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+/* -----------------------------------Navbar----------------------------------- */
+
+  .navbar{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 30px;
+    background-color: #333;
+  }
+
+  .navbar h4 a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .navbar-items{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    gap: 30px;
+  }
+  
+ /* -----------------------------------Employee Data----------------------------------- */ 
+
+  .emp-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .emp-container h2{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 5px;
+  }
+
+  .edit-btn, .delete-btn {
+    font-size: 13.5px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: blue;
+  }
+
+  .delete-btn:hover{
+    background-color: red;
+  }
+
+  /* -----------------------------------Footer----------------------------------- */
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* -----------------------------------Add New Employee----------------------------------- */
+
+  .Addnewemp {
+    width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .Addnewemp h2{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  input[type="submit"] {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #555;
+  }
+
+/* -----------------------------------Update Employee----------------------------------- */
+
+.update-emp {
+    width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .update-emp h2{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .green-message {
+    background-color: rgba(0, 128, 0, 0.556);
+    border-radius: 4px;
+    margin: 30px auto;
+    color: #fff;
+    width: 69.5%;
+    padding: 5px 10px;
+  } 
